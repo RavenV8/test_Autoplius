@@ -1,6 +1,6 @@
 # test_Autoplius
 
-## Login function
+## Login function (not finished)
 
 First test checks the login to the autoplius.lt website function. It performs the following steps:
 
