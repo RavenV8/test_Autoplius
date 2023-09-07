@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation test" parallel="methods" thread-count="6">
+    <test name="Autoplius">
+        <classes>
+            <class name="lt.lukas.tests.autoplius.loginTests.LoginTestPositive"/>
+            <class name="lt.lukas.tests.autoplius.loginTests.LoginTestNegative"/>
+        </classes>
+    </test>
+</suite>
