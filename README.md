@@ -1,9 +1,10 @@
 # test_Autoplius
 
-## Login function (not finished)
+## Login function
 
 First test checks the login to the autoplius.lt website function. It performs the following steps:
 
+Positive test:
 1. Opens the autoplius.lt website: [https://autoplius.lt/](https://autoplius.lt/)
 2. Clicks the "Prisijungti" button
 3. Clicks on the "TEL. NUMERIS ARBA EL. PAŠTAS" tab
@@ -12,6 +13,13 @@ First test checks the login to the autoplius.lt website function. It performs th
 6. Clicks on the "Slaptažodis" tab
 7. Writes the password: `Slaptazodi`
 8. Clicks the "Prisijungti" button
+
+Negative tests data:
+1. {"asdafddsf@gmail.com", "Slaptazodi", "FAILED. Incorrect email."},
+2. {"", "Slaptazodi", "FAILED. Incorrect email."},
+3. {"cadxmwmyvbdfnoyepd@ckptr.com", "QWERT", "FAILED. Incorrect password."},
+4. {"cadxmwmyvbdfnoyepd", "", "FAILED. Incorrect email."},
+5. {"", "", "FAILED. Incorrect email."},
 
 ## Used tools
 1. java 20.0.2 2023-07-18
