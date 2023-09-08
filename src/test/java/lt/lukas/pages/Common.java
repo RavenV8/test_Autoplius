@@ -23,9 +23,6 @@ public class Common {
     public static void clickOnElement(By locator) {
         getElement(locator).click();
     }
-    public static boolean isElementVisible(By locator) {
-        return getElement(locator).isDisplayed();
-    }
     public static boolean waitForElementToBeVisibleCustomised(By locator, int seconds) {
         WebDriverWait wait = new WebDriverWait(Driver.getInstance(), Duration.ofSeconds(seconds));
         try {
