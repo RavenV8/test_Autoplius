@@ -1,7 +1,7 @@
 package lt.lukas.tests.autoplius.searchCarTests;
 
 
-import lt.lukas.pages.autoplius.seachCarPage.SearchCarPage;
+import lt.lukas.pages.autoplius.seachCarPages.SearchCarPage;
 import lt.lukas.tests.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -33,14 +33,16 @@ public class SearchCarTest extends BaseTest {
             String brand, String model, String fromYear, String toYear,
             String fromPrice, String toPrice, String fuelType, String transmission, String bodyType){
 
-        if(!brand.isEmpty()) SearchCarPage.selectBrandOptions(brand, model);
-        if(!fromYear.isEmpty() || !toYear.isEmpty()) SearchCarPage.selectFromToOptions(fromYear, toYear, "year");
-        if(!fromPrice.isEmpty() || !toPrice.isEmpty()) SearchCarPage.selectFromToOptions(fromPrice, toPrice, "price");
-        if(!fuelType.isEmpty()) SearchCarPage.selectSingleOptionCheckbox(fuelType, "fuel");
-        if(!transmission.isEmpty()) SearchCarPage.selectSingleOption(transmission, "transmission");
-        if(!bodyType.isEmpty()) SearchCarPage.selectSingleOptionCheckbox(bodyType, "body");
+        //Some methods have "type" string that is used in switch cases in Locators for cleaner code
+        if(!brand.isEmpty()) {SearchCarPage.selectBrandOptions(brand, model);}
+        if(!fromYear.isEmpty() || !toYear.isEmpty()) {SearchCarPage.selectFromToOptions(fromYear, toYear, "year");}
+        if(!fromPrice.isEmpty() || !toPrice.isEmpty()) {SearchCarPage.selectFromToOptions(fromPrice, toPrice, "price");}
+        if(!fuelType.isEmpty()) {SearchCarPage.selectSingleOptionCheckbox(fuelType, "fuel");}
+        if(!transmission.isEmpty()) {SearchCarPage.selectSingleOption(transmission, "transmission");}
+        if(!bodyType.isEmpty()) {SearchCarPage.selectSingleOptionCheckbox(bodyType, "body");}
         SearchCarPage.submitDataToSearch();
 
+        //Generating expectedResult from data
         String expectedResult = SearchCarPage.generateExpectedResult(brand, model, fromYear, toYear, fromPrice, toPrice, fuelType, transmission, bodyType);
         String actualResult = SearchCarPage.searchDescription();
 

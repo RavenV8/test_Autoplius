@@ -19,7 +19,7 @@ public class Driver {
 //        options.addArguments("user-data-dir=C:\\Users\\clacc\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
         options.addArguments("--start-maximized");
         options.addArguments("--force-device-scale-factor=0.75");
-        //options.addArguments("--headless=new");
+        options.addArguments("--headless=new");
 
         //       webDriver = new ChromeDriver(options);
         webDriver.set(new ChromeDriver(options));

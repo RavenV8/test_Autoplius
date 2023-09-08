@@ -1,4 +1,4 @@
-package lt.lukas.pages.autoplius.seachCarPage;
+package lt.lukas.pages.autoplius.seachCarPages;
 
 import lt.lukas.pages.Common;
 import lt.lukas.pages.Locators;

@@ -5,6 +5,8 @@
         <classes>
             <class name="lt.lukas.tests.autoplius.loginTests.LoginTestPositive"/>
             <class name="lt.lukas.tests.autoplius.loginTests.LoginTestNegative"/>
+            <class name="lt.lukas.tests.autoplius.createSellTests.CreateSellTest"/>
+            <class name="lt.lukas.tests.autoplius.searchCarTests.SearchCarTest"/>
         </classes>
     </test>
 </suite>
